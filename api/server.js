@@ -12,11 +12,11 @@ const postsRouter = require('./posts/posts-router')
 server.use(express.json())
 
 //STEP 3:
-server.use('./api/post', postsRouter)
+server.use('/api/posts', postsRouter)
 
 server.use('*', (req, res) =>{
     res.status(404).json({
-        message:'Not Found!!'
+        message:'Not Found!!!!!!'
     })
 })
 
